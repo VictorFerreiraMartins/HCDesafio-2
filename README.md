@@ -1,4 +1,4 @@
-# Desafio #2 - Gestão de Cadastros por Victor Martins
+# Desafio #2 - Gestão de Cadastros
 
 A proposta deste projeto era de criar um sistema onde fosse possível cadastrar clientes e produtos, armazenando seus respectivos dados de maneira estruturada no LocalStorage.
 
