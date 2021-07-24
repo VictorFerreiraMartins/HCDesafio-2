@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.title{
+    text-align: center;
+    width: 100%;
+}
+
+.title div{
+    font-size: 30px;
+}
+
+.title button{
+    font-size: 18px;
+}
+
+
+#container{
+    background: url(../assets/bg.jpg) no-repeat center top fixed;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    min-height: 600px;
+    align-content: flex-start;
+}
+
+#block-show-clients, #block-show-products{
+    display: none;
+    margin: 5px 20px;
+}
+#block-show-clients h2, #block-show-products h2{
+    text-align: center;
+}
+
+#blockNewClient,  #blockNewProduct {
+    display: none;
+    margin: 5px auto;
+}
+.block-show{
+    width: 100%;
+}
+.block-new, .block-new div{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    padding: 5px 0;
+}
+
+.block-new input {
+    height: 40px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+body[page=show-clients] #block-show-clients{display: block;}
+body[page=show-products] #block-show-products{display: block;}
+body[page=new-client] #blockNewClient{display: flex}
+body[page=new-product] #blockNewProduct{display: flex}
+
+button, .addClient, .addProduct{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #07a;
+    color: #fff;
+    margin: 20px;
+    padding:10px 15px;
+}
+
+button:hover, #addClient:hover, #addProduct:hover{
+    opacity: 0.8;
+    background-color: #00b3ff;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    font-size: 12px;
+    padding: 10px 15px;
+    border: solid 1px #ccc;
+}
+
+footer{
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+footer div{
+    font-size: 12px;
+}
+
+footer img{
+    height: 40px;
+    width: 40px;
+}
+
+footer ul{
+    display: flex;
+    justify-content:space-around;
+    list-style-type: none;
+}
+
+footer li{
+    margin: 0 10px;
+}

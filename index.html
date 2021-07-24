@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Desafio #2</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Dashboard</div>
+        <div class="welcome">Welcome!</div>
+    </header>
+    <main>
+        <div id="container">
+            <div class="title">
+                <div>O que deseja fazer?</div>
+                <div>
+                    <button onClick="toggleView('show-clients')">Visualizar todos clientes</button>
+                    <button onClick="toggleView('new-client')">Adicionar novo cliente</button>
+                    <button onClick="toggleView('show-products')">Visualizar todos produtos</button>
+                    <button onClick="toggleView('new-product')">Adicionar novo produto</button>
+                </div>
+
+            </div>
+
+            <div id="block-show-clients" class="block-show">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th>Complemento</th>
+                            <th>Cidade</th>
+                            <th>UF</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="block-show-clients-body">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <form id="blockNewClient" class="block-new">
+                <div class="clientName">
+                    <label for="clientName">Nome</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="clientMail">
+                    <label for="clientMail">E-mail</label>
+                    <input type="email" id="clientMail" placeholder="mail@mail.com" required>
+                </div>
+                <div class="clientCPF">
+                    <label for="clientCPF">CPF</label>
+                    <input type="text" id="clientCPF" maxlength="11" placeholder="___.___.___-__" required>
+                </div>
+                <div class="clientPhone">
+                    <label for="clientPhone">Telefone</label>
+                    <input type="tel" id="clientPhone" maxlength="11" placeholder="(__) _____-____">
+                </div>
+                <div class="clientAddress">
+                    <label for="clientAddress">Endereço</label>
+                    <input type="text" id="clientAddress" maxlength="30" required>
+                </div>
+                <div class="clientAddressInfo">
+                    <label for="clientAddressInfo">Complemento</label>
+                    <input type="text" id="clientAddressInfo" maxlength="30" required>
+                </div>
+                <div class="clientAddressCity">
+                    <label for="clientAddressCity">Cidade</label>
+                    <input type="text" id="clientAddressCity" maxlength="30" required>
+                </div>
+                <div class="clientAddressUF">
+                    <label for="clientAddressUF">UF</label>
+                    <input type="text" id="clientAddressUF" maxlength="2" required>
+                </div>
+                <input class="addClient" type="submit" onClick="addClient()" value="Cadastrar"/>
+            </form>
+
+            <div id="block-show-products" class="block-show">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="block-show-products-body">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <form id="blockNewProduct" class="block-new">
+                <div class="productName">
+                    <label for="productName">Nome</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="productCategory">
+                    <label for="productCategory">Categoria</label>
+                    <input type="text" id="productCategory" maxlength="30" required>
+                </div>
+                <div class="productDescription">
+                    <label for="productDescription">Descrição</label>
+                    <input type="text" id="productDescription" maxlength="256" required>
+                </div>
+                <div class="productPrice">
+                    <label for="productPrice">Preço Unitário R$</label>
+                    <input type="text" id="productPrice" maxlength="8" placeholder="00,00" required>
+                </div>
+                <div class="productAmount">
+                    <label for="productAmount">Quantidade</label>
+                    <input type="number" id="productAmount" maxlength="3" required>
+                </div>
+                <input class="addProduct" type="submit" onClick="addProduct()" value="Cadastrar"/>
+            </form>
+
+        </form>
+    </main>
+    <footer>
+        <div>
+            <p>
+                Produzido por Victor Martins.
+            </p>
+            <p>
+                Todos os direitos reservados.
+            </p>
+        </div>    
+        <div class="medias">
+            <ul>
+                <li>
+                    <a href="https://github.com/VictorFerreiraMartins" target="_blank">
+                        <img class="img" src="assets/github.png"></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/victor-ferreira-martins-7896a1100/" target="_blank">
+                        <img class="img" src="assets/linkedin.png"></img>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+<script src="js/script.js"></script>
+</html>
