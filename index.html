@@ -19,7 +19,7 @@
         <div id="container">
             <div class="title">
                 <div>O que deseja fazer?</div>
-                <div>
+                <div class="navbuttons">
                     <button onClick="toggleView('show-clients')">Visualizar todos clientes</button>
                     <button onClick="toggleView('new-client')">Adicionar novo cliente</button>
                     <button onClick="toggleView('show-products')">Visualizar todos produtos</button>
@@ -38,6 +38,7 @@
                             <th>Telefone</th>
                             <th>Endereço</th>
                             <th>Complemento</th>
+                            <th>Bairro</th>
                             <th>Cidade</th>
                             <th>UF</th>
                         </tr>
@@ -64,7 +65,7 @@
                 </div>
                 <div class="clientPhone">
                     <label for="clientPhone">Telefone</label>
-                    <input type="tel" id="clientPhone" maxlength="11" placeholder="(__) _____-____">
+                    <input type="tel" id="clientPhone" maxlength="11" placeholder="(__) _____-____" required>
                 </div>
                 <div class="clientAddress">
                     <label for="clientAddress">Endereço</label>
@@ -73,6 +74,10 @@
                 <div class="clientAddressInfo">
                     <label for="clientAddressInfo">Complemento</label>
                     <input type="text" id="clientAddressInfo" maxlength="30" required>
+                </div>
+                <div class="clientAddressDistrict">
+                    <label for="clientAddressDistrict">Bairro</label>
+                    <input type="text" id="clientAddressDistrict" maxlength="30" required>
                 </div>
                 <div class="clientAddressCity">
                     <label for="clientAddressCity">Cidade</label>
@@ -117,7 +122,7 @@
                     <input type="text" id="productDescription" maxlength="256" required>
                 </div>
                 <div class="productPrice">
-                    <label for="productPrice">Preço Unitário R$</label>
+                    <label for="productPrice">Preço Unitário (R$)</label>
                     <input type="tel" id="productPrice" maxlength="8" placeholder="00,00" required>
                 </div>
                 <div class="productAmount">

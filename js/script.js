@@ -13,6 +13,7 @@ function addClient(){
     let clientPhone = document.getElementById('clientPhone').value;
     let clientAddress = document.getElementById('clientAddress').value;
     let clientAddressInfo = document.getElementById('clientAddressInfo').value;
+    let clientAddressDistrict = document.getElementById('clientAddressDistrict').value;
     let clientAddressCity = document.getElementById('clientAddressCity').value;
     let clientAddressUF = document.getElementById('clientAddressUF').value;
 
@@ -23,11 +24,12 @@ function addClient(){
         clientPhone,
         clientAddress,
         clientAddressInfo,
+        clientAddressDistrict,
         clientAddressCity,
         clientAddressUF,
     }
 
-    if (clientNome == "" || clientMail == "" || clientCPF == "" || clientPhone == "" || clientAddress == "" || clientAddressInfo == "" || clientAddressCity == "" || clientAddressUF == ""){
+    if (clientNome == "" || clientMail == "" || clientCPF == "" || clientPhone == "" || clientAddress == "" || clientAddressInfo == "" || clientAddressDistrict == "" || clientAddressCity == "" || clientAddressUF == ""){
         alert("Favor preencher todos os campos")
     } else
         if (typeof(Storage) !== "undefined") {
@@ -56,6 +58,7 @@ function listClients() {
                 <td>${content.clientPhone}</td>
                 <td>${content.clientAddress}</td>
                 <td>${content.clientAddressInfo}</td>
+                <td>${content.clientAddressDistrict}</td>
                 <td>${content.clientAddressCity}</td>
                 <td>${content.clientAddressUF}</td>
             </tr>`
