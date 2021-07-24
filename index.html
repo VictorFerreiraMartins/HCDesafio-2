@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Dashboard</div>
+        <div class="logo" >Dashboard</div>
         <div class="welcome">Welcome!</div>
     </header>
     <main>
@@ -20,9 +20,9 @@
             <div class="title">
                 <div>O que deseja fazer?</div>
                 <div>
-                    <button onClick="toggleView('show-clients')">Visualizar todos clientes</button>
+                    <!-- <button onClick="toggleView('show-clients')">Visualizar todos clientes</button> -->
                     <button onClick="toggleView('new-client')">Adicionar novo cliente</button>
-                    <button onClick="toggleView('show-products')">Visualizar todos produtos</button>
+                    <!-- <button onClick="toggleView('show-products')">Visualizar todos produtos</button> -->
                     <button onClick="toggleView('new-product')">Adicionar novo produto</button>
                 </div>
 
@@ -118,7 +118,7 @@
                 </div>
                 <div class="productPrice">
                     <label for="productPrice">Preço Unitário R$</label>
-                    <input type="text" id="productPrice" maxlength="8" placeholder="00,00" required>
+                    <input type="number" id="productPrice" maxlength="8" placeholder="00,00" required>
                 </div>
                 <div class="productAmount">
                     <label for="productAmount">Quantidade</label>
